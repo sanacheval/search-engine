@@ -19,7 +19,6 @@ public class SearchEngine {
 	 * For each new page seen, it updates the wordIndex, the web graph,
 	 * and the set of visited vertices.
 	 * 
-	 * 	This method will fit in about 30-50 lines (or less)
 	 */
 	public void crawlAndIndex(String url) throws Exception {
 		if (internet.getVertices().contains(url)) {
@@ -38,6 +37,7 @@ public class SearchEngine {
 			internet.addEdge(url, parser.getLinks(url).get(i));
 		}
 		
+		//add content to the word index
 		for(int i = 0; i<parser.getContent(url).size(); i++) {
 			if (wordIndex.containsKey(parser.getContent(url).get(i).toLowerCase())) {
 				ArrayList<String> list = new ArrayList<String>();
@@ -68,7 +68,7 @@ public class SearchEngine {
 	 * To implement this method, refer to the algorithm described in the 
 	 * assignment pdf. 
 	 * 
-	 * This method will probably fit in about 30 lines.
+	 * 
 	 */
 	public void assignPageRanks(double epsilon) {
 		ArrayList<String> urls = internet.getVertices();
@@ -113,7 +113,7 @@ public class SearchEngine {
 	/* Returns a list of urls containing the query, ordered by rank
 	 * Returns an empty list if no web site contains the query.
 	 * 
-	 * This method should take about 25 lines of code.
+	 * 
 	 */
 	public ArrayList<String> getResults(String query) {
 		if (wordIndex.containsKey(query)) {

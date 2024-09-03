@@ -7,6 +7,7 @@ import java.util.Map.Entry; // You may need it to implement fastSort
 public class Sorting {
 
 	/*
+	* This code is not mine
 	 * This method takes as input an HashMap with values that are Comparable. 
 	 * It returns an ArrayList containing all the keys from the map, ordered 
 	 * in descending order based on the values they mapped to. 
@@ -32,7 +33,7 @@ public class Sorting {
     }
     
     
-	/*
+	/*The following code is mine
 	 * This method takes as input an HashMap with values that are Comparable. 
 	 * It returns an ArrayList containing all the keys from the map, ordered 
 	 * in descending order based on the values they mapped to. 
